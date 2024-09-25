@@ -6,10 +6,7 @@ import numpy as np
 from datetime import datetime
 
 st.set_page_config(layout="wide")
-st.title("Webcam Live Feed")
-
-models = ["VGG-Face", "Facenet", "OpenFace", "DeepFace", "DeepID"]
-
+st.title("WatchDog - Face Detection")
 
 with st.container():
     col1, col2 = st.columns(2)
@@ -32,6 +29,7 @@ with st.container():
         FRAME_WINDOW = st.image([], use_column_width=True)
         camera = cv2.VideoCapture(0)
 
+# Display the comparison window
 DETECT_WINDOW = st.image([])
 
 while run:
